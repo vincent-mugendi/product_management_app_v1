@@ -39,7 +39,7 @@ This project is built with modern web technologies:
 
 ```bash
 # Clone the repository
-git clone <repository-url>
+git clone <https://github.com/vincent-mugendi/product_management_app_v1.git>
 
 # Install dependencies
 npm install
