@@ -13,6 +13,8 @@ import { FileText, ExternalLink, Package } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Order } from '@/types';
 
+import { Link } from 'react-router-dom';
+
 const LiveOrders = () => {
   const { orders } = useOrderStore();
   const [selectedOrder, setSelectedOrder] = useState<Order | null>(null);
@@ -38,9 +40,14 @@ const LiveOrders = () => {
           <Package className="h-12 w-12 mx-auto mb-4 text-gray-300" />
           <h3 className="text-lg font-medium mb-2">No Live Orders</h3>
           <p className="text-gray-500 mb-6">You don't have any active orders at the moment.</p>
+          
           <Button className="bg-brand-red hover:bg-red-600" asChild>
-            <a href="/products">Browse Products</a>
+            <Link to="/products">
+            Browse Products
+            </Link>
+            
           </Button>
+
         </div>
       ) : (
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
